@@ -36,6 +36,7 @@ export const verifyToken = (req, res, next) => {
 
 
 export const verifyTokenAndAuthorization = (req, res, next) => {
+    console.log("admin updateeeeeee");
     verifyToken(req, res, () => {
         if(req.decodedData.userId === req.params.id || req.decodedData.userId || req.decodedData?.sub || req.decodedData.isAdmin) {
             next();

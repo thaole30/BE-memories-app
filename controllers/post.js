@@ -103,6 +103,7 @@ export const deletePost = async (req, res) => {
 
 export const updatePost = async (req, res) => {
     const {id} = req.params;
+    console.log("update id", id);
 
     const post = req.body;
 
